@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Setup .NET 6.0
+      - name: Setup .NET 7.0
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '7.0.x'
 
       - name: Clone
         uses: actions/checkout@v2
@@ -18,10 +18,8 @@ jobs:
       - name: Build
         run: dotnet publish -c Release src
           
-      # You'll need to add each plugin as an artifact here
-      #Example:
-      # - name: Upload
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: MyArtifactName
-      #     path: src/MyPluginFolder/bin/x64/Release/net6.0/publish
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: Artemis.Plugins.Modules.HomeWizard
+          path: src/bin/x64/Release/net7.0/publish
