@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
+using Artemis.Core;
 using Artemis.Core.Modules;
 using Artemis.Plugins.Modules.HomeWizard.DataModels;
 using Artemis.Plugins.Modules.HomeWizard.Responses;
@@ -11,6 +12,7 @@ using Zeroconf;
 
 namespace Artemis.Plugins.Modules.HomeWizard;
 
+[PluginFeature(Name = "HomeWizard Meters")]
 public class HomeWizardModule : Module<HomeWizardDataModel>
 {
     private readonly HttpClient _httpClient;
