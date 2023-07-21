@@ -1,0 +1,15 @@
+{
+  "Guid": "A53F901A-E2CE-4C4A-905A-E6D7F1409A58",
+  "Name": "HomeWizard",
+  "Description": "Adds HomeWizard meter data to the data model",
+  "Author": "",
+  "Website": "",
+  "Repository": "",
+  "Icon": "QuestionMark",
+  "Version": "1.0.0.0",
+  "Main": "Artemis.Plugins.Modules.HomeWizard.dll",
+  "AutoEnableProperties": true,
+  "RequiresAdmin": false,
+  "Platforms": "Windows,Linux,OSX",
+  "Api": "1.0.0"
+}
