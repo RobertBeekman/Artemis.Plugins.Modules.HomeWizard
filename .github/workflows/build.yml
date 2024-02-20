@@ -22,7 +22,7 @@ jobs:
         run: dotnet tool install ArtemisRGB.Tools.PluginUploader --global
         
       - name: Workshop Upload
-        run: artemis-plugin-uploader upload --pat ${{ secrets.WORKSHOP_PAT }} --path src/bin/x64/Release/net7.0/publish
+        run: artemis-plugin-uploader upload --pat ${{ secrets.WORKSHOP_PAT }} --folder src/bin/x64/Release/net7.0/publish
           
       - name: Artifact Upload
         uses: actions/upload-artifact@v3
