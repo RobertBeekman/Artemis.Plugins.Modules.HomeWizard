@@ -61,7 +61,10 @@ public class HomeWizardModule : Module<HomeWizardDataModel>
 
         // P1 meter
         if (device.ProductType == "HWE-P1")
-            DataModel.AddMeter(new P1MeterDataModel(host.IPAddress, device), device.Serial, $"{device.ProductName} ({host.IPAddress})");
+            DataModel.AddMeter(new P1MeterDataModel(host.IPAddress, device), device.Serial, $"{device.ProductName} ({device.Serial})");
+        // Energy Socket
+        else if (device.ProductType == "HWE-SKT")
+            DataModel.AddMeter(new EnergySocketDataModel(host.IPAddress, device), device.Serial, $"{device.ProductName} ({device.Serial})");
     }
 
     private async Task UpdateDevices()

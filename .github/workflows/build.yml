@@ -17,8 +17,14 @@ jobs:
 
       - name: Build
         run: dotnet publish -c Release src
+
+      - name: Install Plugin Uploader
+        run: dotnet tool install ArtemisRGB.Tools.PluginUploader
+        
+      - name: Workshop Upload
+        run: artemis-plugin-uploader --pat ${{ secrets.WORKSHOP_PAT }} --path .
           
-      - name: Upload
+      - name: Artifact Upload
         uses: actions/upload-artifact@v3
         with:
           name: Artemis.Plugins.Modules.HomeWizard
