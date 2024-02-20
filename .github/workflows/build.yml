@@ -19,7 +19,7 @@ jobs:
         run: dotnet publish -c Release src
 
       - name: Install Plugin Uploader
-        run: dotnet tool install ArtemisRGB.Tools.PluginUploader
+        run: dotnet tool install ArtemisRGB.Tools.PluginUploader --global
         
       - name: Workshop Upload
         run: artemis-plugin-uploader --pat ${{ secrets.WORKSHOP_PAT }} --path .
