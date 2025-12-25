@@ -1,5 +1,7 @@
 # Artemis HomeWizard plugin
 
+> This repository has been moved to https://github.com/RobertBeekman/Artemis.Plugins.Robert
+
 Plugin for Artemis capable of capturing P1 meter data from HomeWizard: https://www.homewizard.com/
 
 # Installation
